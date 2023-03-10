@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useCallback } from "react";
+import React, { FC, useCallback } from "react";
 import Router from "next/router"
 
 import Card from "../Card/Card";

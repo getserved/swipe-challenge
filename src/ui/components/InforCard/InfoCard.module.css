@@ -31,19 +31,26 @@
 
 .infoCardIcon {
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .infoCardIcon svg {
   min-width: 16px;
   width: 32px;
   height: 32px;
+  margin: auto 0;
 }
 
 .infoCardContent {
   display: flex;
   flex-direction: column;
-  flex: 1 1 0%;
-  height: inherit;
+  flex: 1;
+  height: 80px;
+}
+
+.infoCardContentWrapper {
+  margin: auto 0;
 }
 
 .infoArrow {
@@ -69,7 +76,8 @@
   }
 
   .infoCardContent {
-    font-size: var(--font-sm)
+    font-size: var(--font-sm);
+    height: 60px;
   }
 
   .infoArrow {

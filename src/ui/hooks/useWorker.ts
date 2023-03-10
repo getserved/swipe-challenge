@@ -1,5 +1,4 @@
 import { useDispatch } from "react-redux";
-import { PayloadAction } from '@reduxjs/toolkit'
 import { AppDispatch } from "../../core/reducers"
 import { fetchWorker } from "../../core/reducers/WorkerSlice"
 

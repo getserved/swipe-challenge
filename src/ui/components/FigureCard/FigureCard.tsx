@@ -1,8 +1,4 @@
-import React, { FC, useEffect, useMemo } from "react";
-import { useAppSelector } from '../../hooks'
-import Router from "next/router"
-import cx from "classnames"
-import Image from "next/image"
+import React, { FC } from "react";
 
 import $ from "./FigureCard.module.css";
 import type {Figure} from "../../../core/types"
@@ -23,7 +19,7 @@ const FigureCard: FC<FigureCardProps> = ({
                     <div className={$.figureCardFigureContent}>
                         {figure.prefix && <span className={$.figureCardPrefix}>{figure.prefix}</span>}
                         <span className={$.figureCardFigure}>{figure.value}</span>
-                        {figure.postfix && <span className={$.figureCardPostfix}>{figure.postfix}</span>}
+                        {figure.postfix &&<span className={$.figureCardPostfix}>{figure.postfix}</span>}
                     </div>
                 </div>
             )})}

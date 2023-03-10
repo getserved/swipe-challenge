@@ -1,7 +1,4 @@
-import React, { FC, useEffect, useMemo } from "react";
-import { useAppSelector } from '../../hooks'
-import Router from "next/router"
-import cx from "classnames"
+import React, { FC } from "react";
 import Image from "next/image"
 
 import $ from "./Card.module.css";

@@ -1,11 +1,10 @@
 import React, { useEffect } from "react"
 import { useAppSelector } from './ui/hooks'
-
-import $ from "../styles/App.module.css"
 import Section from "./ui/components/Section/Section"
 import JobList from "./ui/components/JobList/JobList"
 import useWorker from "./ui/hooks/useWorker"
 import useJob from "./ui/hooks/useJob"
+import ErrorMessage from "./ui/components/ErrorMessage/ErrorMessage"
 
 function App() {
 
@@ -15,7 +14,7 @@ function App() {
 
   const { currentWorkerId } = useAppSelector(state => state.worker)
 
-  const { matchedJobs } = useAppSelector(state => state.job)
+  const { matchedJobs, errors } = useAppSelector(state => state.job)
 
   useEffect(() => {
     fetchJobs()
@@ -29,6 +28,7 @@ function App() {
     <main>
       <Section className="relative">
         <JobList jobs={matchedJobs} />
+        {errors && <ErrorMessage>{errors}</ErrorMessage>}
       </Section>
     </main>
   );

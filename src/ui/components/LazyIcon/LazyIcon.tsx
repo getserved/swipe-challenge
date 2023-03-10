@@ -1,8 +1,6 @@
 import React, { FC } from "react";
 import dynamic from 'next/dynamic'
 
-import $ from "./InfoCard.module.css";
-
 export enum IconType {
     CALENDAR = 'calendar',
     LOCATION = 'location',

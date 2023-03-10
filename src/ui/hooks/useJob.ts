@@ -1,13 +1,9 @@
 import { useDispatch } from "react-redux";
-import { PayloadAction } from '@reduxjs/toolkit'
 import { AppDispatch } from "../../core/reducers"
 import { fetchJobs, select, actionJob } from "../../core/reducers/JobSlice"
-import { useAppSelector } from ".";
 
 export default function useUser() {
   const dispatch = useDispatch<AppDispatch>();
-
-  const {errors} = useAppSelector(state => state.job)
 
   return {
     // fetch jobs by action

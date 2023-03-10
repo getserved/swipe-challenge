@@ -2,8 +2,6 @@ import React, { FC } from "react";
 import cx from "classnames";
 
 import $ from "./Section.module.css";
-import classNames from "classnames";
-
 
 export enum SectionType {
   LIGHT = 'light',

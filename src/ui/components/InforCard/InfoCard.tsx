@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import dynamic from 'next/dynamic'
 
 import $ from "./InfoCard.module.css";
 import type { Info } from "../../../core/types"
@@ -9,7 +8,7 @@ import ScrollableContainer from "../ScrollableContainer/ScrollableContainer"
 interface InfoCardProps{
   icon: IconType,
   title: string,
-  list: (string | Info)[],
+  list?: (string | Info)[],
   hasArrow?: boolean
 }
 
@@ -36,17 +35,19 @@ const InfoCard: FC<InfoCardProps> = ({
                 <LazyIcon icon={icon}/>
             </div>
             <div className={$.infoCardContent}>
-                <h4>{title}</h4>        
-                <ScrollableContainer className={$.infoCardInfoWrapper}>
-                    {list && list.map((i, k) => {
-                        const info = getInfo(i)
-                        return(
-                            <div key={`info_${title}_${k}`} className={info.className? info.className: ''}>
-                                { info.info }
-                            </div>
+                <div className={$.infoCardContentWrapper}>
+                    <h4>{title}</h4>        
+                    <ScrollableContainer className={$.infoCardInfoWrapper}>
+                        {list && list.map((i, k) => {
+                            const info = getInfo(i)
+                            return(
+                                <div key={`info_${title}_${k}`} className={info.className? info.className: ''}>
+                                    { info.info }
+                                </div>
+                            )}
                         )}
-                    )}
-                </ScrollableContainer>
+                    </ScrollableContainer>
+                </div>
             </div>
             {hasArrow && <LazyIcon className={$.infoArrow} icon={IconType.ARROW_RIGHT}/>}
         </div>

@@ -84,7 +84,7 @@ const Layout: FC<JobProps> = ({
           <div className={$.jobInfoContainer}>
             <InfoCard icon={IconType.CALENDAR} title="Shift Dates" list={shifts} />
             <InfoCard icon={IconType.LOCATION} hasArrow title="Location" list={address} />
-            {requirements && <InfoCard icon={IconType.TOOLS} title="Requirements" list={requirements} />}
+            <InfoCard icon={IconType.TOOLS} title="Requirements" list={requirements} />
             <InfoCard icon={IconType.PERSON} title="Report To" list={reportTo} />
           </div>
         </div>
