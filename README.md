@@ -2,6 +2,7 @@
 This is accomplished based on React and Next.js
 
 - 🏃🏻‍♂️ Run `npm install`, `npm build` and then `npm start`
+- 🏃🏻‍♂️ Run `npm test` for coverage testing
 
 ## TECH SETS
 

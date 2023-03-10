@@ -1,8 +1,8 @@
-import { screen, render } from '@testing-library/react'
+import { screen, act } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import Job from './Job'
 import { renderWithProviders } from '../../../utils/testUtils'
-import { set, reset, fetchJobs, actionJob, select } from "../../../core/reducers/JobSlice"
+import { fetchJobs, actionJob, select } from "../../../core/reducers/JobSlice"
 
 const props = {
   job: {
@@ -35,9 +35,10 @@ const props = {
   }
 }
 
-test('Job rendering with init state', () => {
-  renderWithProviders(<Job {...props}/>)
-
+test('Job rendering with init state', async () => {
+  await act( async () => {
+    renderWithProviders(<Job {...props}/>)
+  })
   expect(screen.getByText(/Construction General Helper/i)).toBeInTheDocument()
 
   expect(screen.getByText(/Steve Smith Construction/i)).toBeInTheDocument()
@@ -58,11 +59,13 @@ test('Click event on buttons', async () => {
     const state = store.getState().job
     const mockJobId = '5775d8e18a488e6c5bb08c13'
     
-    await store.dispatch(fetchJobs)
-    await store.dispatch(select(mockJobId))
-    await store.dispatch(actionJob('accept'))
-
-    setTimeout(() => {
-      expect(state.selectedJob?.success).toEqual(true)
-    },500)
+    await act( async () => {
+      await store.dispatch(fetchJobs)
+      await store.dispatch(select(mockJobId))
+      await store.dispatch(actionJob('accept'))
+    
+      setTimeout(() => {
+        expect(state.selectedJob?.success).toEqual(true)
+      },500)
+    })
 })
