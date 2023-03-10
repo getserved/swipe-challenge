@@ -1,0 +1,61 @@
+.figureCard {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: var(--figure-card-bg-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: between;
+}
+
+.figureCardContent {
+  width: 100%;
+  height: 100%;
+  z-index:2;
+  padding: 0.5rem 2rem;
+  text-align: center;
+}
+
+.figureCardContent:first-child {
+  text-align: left;
+}
+
+.figureCardContent:last-child {
+  text-align: right;
+}
+
+.figureCardName {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.figureCardFigureContent {
+  color: white;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.figureCardPrefix {
+  font-size: 14px;
+  vertical-align: top;
+}
+
+.figureCardPostfix {
+  margin-left: 0.5rem;
+}
+
+@media screen and (max-width: 640px) {
+  .figureCardContent {
+    padding: 0.5rem 1rem;
+  }
+
+  .figureCardName {
+    font-size: 10px;
+  }
+
+  .figureCardFigureContent {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,123 @@
+.panel {
+    width: 100%;
+    transition-property: height;
+    transition-duration: 1s;
+}
+
+.heroHeading {
+    transition-property: height;
+    transition-duration: 1s;
+    height: 3rem;
+}
+
+.vehicles {
+    min-height: 245px;
+}
+
+.vehicleImg {
+    margin-left: auto;
+    margin-right: auto;
+    width: 10rem;
+    object-fit: contain;
+}
+
+.vehicleName {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.vehicleDetails {
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    color: #2f2f2f;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+}
+
+.animateVehicle .vehicleName,
+.animateVehicle .vehicleDetails {
+    transition: opacity 0.5s;
+    opacity: 0;
+}
+
+.animateVehicle .vehicleImg{
+    transition: transform 1s;
+    transform: rotate(180deg) scale(0.5);
+    animation-name: launch;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.fadeOut {
+    transition-property: height;
+    transition-duration: 1s;
+    height: 0rem;
+}
+
+.planetHeading {
+    background-color: #2f2f2f;
+}
+
+.hero {
+    position: relative;
+    transition-property: margin;
+    transition-duration: 1s;
+}
+
+.form {
+    position: relative;
+    background: white;
+    transition: height 1s, opacity 1s, visibility 0s;
+    transform-origin: 50% 0%;
+    opacity: 0;
+    height: 0;
+    z-index: 1;
+}
+
+.formFadeOut {
+    visibility: hidden;
+}
+
+.formFadeIn {
+    transform: scale(1);
+    opacity: 1;
+    height: 15rem;
+    visibility: visible;
+}
+
+.fadeIn .panel {
+    height: 10rem;
+}
+
+@keyframes launch {
+    0% {
+        transform-origin: 50% 50%;
+        transform: rotate(180deg) scale(0.5) translateY(0px);
+    }
+    10% {
+        transform-origin: 50% 50%;
+        transform: rotate(180deg) scale(0.5) translateY(-50px);
+    }
+
+    50% {
+        transform-origin: 50% 50%;
+        transform: rotate(180deg) scale(0.5) translateY(-100px);
+    }
+
+    80% {
+        transform-origin: 50% 50%;
+        transform: rotate(180deg) scale(0.35) translateY(-400px);
+        opacity: 1;
+    }
+
+    100% {
+        transform-origin: 50% 50%;
+        transform: rotate(180deg) scale(0.25) translateY(-800px);
+        opacity: 0;
+    }
+}

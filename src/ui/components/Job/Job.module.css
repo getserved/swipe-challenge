@@ -1,0 +1,89 @@
+.job {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  min-height: calc(100vh - var(--header-height-md) - 2*var(--section-margin-md));
+  max-height: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.jobLoading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5)
+}
+
+.jobContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.jobImg img{
+  position: relative!important;
+  object-fit: cover;
+  height: auto!important;
+}
+
+.jobTitle {
+  padding: 0.5rem 2rem;
+}
+
+
+.jobInfoContainer {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+
+.jobInfoActions {
+  height: 80px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.actionBtn {
+  height: 100%;
+  margin: 0 0.5rem;
+}
+
+.jobTaken {
+  display: flex;
+  justify-content: center;
+}
+
+.jobSuccess {
+  color: var(--job-success-color);
+}
+
+.jobStatus {
+  position: absolute;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  text-align: center;
+}
+
+
+@media screen and (max-width: 640px) {
+  .job {
+    min-height: calc(100vh - var(--header-height-sm) - 2*var(--section-margin-sm));
+  }
+
+  .jobTitle {
+    padding: 0.25rem 1rem;
+  }
+  
+  .jobInfoActions {
+    height: 60px;
+    padding: 0px 0.5rem 1rem 0.5rem;
+  }
+}

@@ -1,0 +1,17 @@
+.scrollableContainer {
+  overflow-y: scroll;
+  height: 100%;
+  max-height: 80px;
+}
+
+.scrollableContainer::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+
+@media screen and (max-width: 640px) {
+  .scrollableContainer {
+    max-height: 60px;
+  }
+}

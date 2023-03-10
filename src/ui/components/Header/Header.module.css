@@ -1,0 +1,39 @@
+.header {
+  background-color: black;
+  color: white;
+  height: var(--header-height-md);
+  font-weight: 300;
+}
+
+.headerImg {
+  display: inline-block;
+  height: 100%;
+  width: auto;
+  margin-left: 1rem;
+  object-fit: contain;
+}
+
+.action {
+  margin-right: 2rem;
+}
+
+.action:hover {
+  color: var(--color-brand);
+}
+
+
+@media screen and (max-width: 1024px) {
+  .header {
+    font-size: var(--font-md);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .header {
+    font-size: var(--font-sm);
+    height: var(--header-height-sm);
+  }
+  .action {
+    margin-right: 0.5rem;
+  }
+}

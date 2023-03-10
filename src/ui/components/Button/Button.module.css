@@ -1,0 +1,40 @@
+.button {
+  border-radius: var(--border-radius-default);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  color: white;
+  cursor: pointer;
+  font-size: 0.9em;
+  font-weight: 300;
+  max-width: var(--width-input);
+  padding: 0.25em 0.5em;
+  margin: 0.25em;
+  transition: transform 0.1s ease;
+  width: 100%;
+  background-color: var(--color-brand);
+}
+
+.primary {
+  background: var(--btn-primary-background);
+  color: var(--btn-primary-color);
+  border: var(--btn-primary-border);
+}
+
+.secondary {
+  background: var(--btn-secondary-background);
+  color: var(--btn-secondary-color);
+  border: var(--btn-secondary-border);
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+@media screen and (max-width: 640px) {
+  .button {
+    font-size: var(--btn-font-sm);
+  }
+}
