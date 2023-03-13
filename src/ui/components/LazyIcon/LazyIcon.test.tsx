@@ -1,4 +1,4 @@
-import { screen, render, act } from '@testing-library/react'
+import { render, act } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import LazyIcon, {IconType} from './LazyIcon'
 

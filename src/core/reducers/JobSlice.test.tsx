@@ -1,4 +1,4 @@
-import store, {setupStore, RootState} from './index'
+import store, { RootState } from './index'
 import { set, reset, fetchJobs, actionJob, select } from "./JobSlice"
 
 const worker = {

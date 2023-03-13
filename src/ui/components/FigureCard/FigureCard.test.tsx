@@ -1,4 +1,4 @@
-import { fireEvent, screen, render } from '@testing-library/react'
+import { screen, render } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import FigureCard from './FigureCard'
 

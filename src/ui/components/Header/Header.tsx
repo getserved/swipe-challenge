@@ -1,6 +1,5 @@
 import React from "react";
 import Link from 'next/link'
-import Image from "next/image"
 
 import $ from "./Header.module.css";
 import { useAppSelector } from "../../hooks";

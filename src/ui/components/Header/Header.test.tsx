@@ -1,6 +1,6 @@
 import { fireEvent, screen, render } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import { useRouter } from 'next/router';
+
 import Header from './Header'
 import { renderWithProviders } from "../../../utils/testUtils"
 

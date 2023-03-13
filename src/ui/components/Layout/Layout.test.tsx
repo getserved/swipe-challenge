@@ -1,4 +1,4 @@
-import { fireEvent, screen, render } from '@testing-library/react'
+import { screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import Layout from './Layout'
 import { renderWithProviders } from "../../../utils/testUtils"

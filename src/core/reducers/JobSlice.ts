@@ -3,7 +3,6 @@ import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit'
 import type { Job } from "../types"
 import { BASE_URL } from "../../utils/constants"
 import { RootState } from '.'
-import { isJSDocPublicTag } from 'typescript'
 
 const NORMAL_ERROR = "There's an error when matching jobs"
 

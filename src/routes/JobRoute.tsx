@@ -1,5 +1,4 @@
 import React, { FC, useEffect } from "react";
-import Image from "next/image"
 
 import Section from "../ui/components/Section/Section"
 import Job from "../ui/components/Job/Job"
