@@ -28,7 +28,7 @@ const Layout: FC<WorkerProps> = ({
       {jobs && jobs.map(job => {
         return (
           <li className="block m-2" key={job.jobId}>
-            <Card id={job.jobId} headline={job.jobTitle.name} imgSrc={job.jobTitle.imageUrl} title={job.company.name} onSelect={handleSelect}/>
+            <Card id={job.jobId} headline={job.jobTitle.name} imgSrc={job.jobTitle.imageUrl} title={job.company.name} onSelect={(id) => handleSelect(id)}/>
           </li>
       )})}
      </ul>

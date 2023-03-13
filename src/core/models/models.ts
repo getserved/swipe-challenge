@@ -66,11 +66,17 @@ export const transformRequirements = (data: string[] | undefined) => {
   return data && data.map(item => `- ${item}`)
 }
 
+export const transformPhone = (phone: string) => {
+  if(phone && phone.length >= 10) {
+    return `(${phone.substring(0,3)})${phone.substring(3, phone.length)}`
+  }
+  return phone
+}
+
 export const transformReportTo = (data: {name: string, phone?: string | undefined}) => {
   let { name, phone } = data
-  if(phone && phone.length >= 10) {
-    phone = `(${phone.substring(0,3)})${phone.substring(3, phone.length)}`
-  }
+    phone = transformPhone(phone)
+  
   return [
     `${name} ${phone? phone: ''}`
   ]

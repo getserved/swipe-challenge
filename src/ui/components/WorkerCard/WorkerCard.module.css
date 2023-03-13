@@ -1,0 +1,18 @@
+.workerCard {
+  width: 100%;
+  height: auto;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+}
+
+.icon {
+  width: 16px;
+}

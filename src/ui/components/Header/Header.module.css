@@ -21,6 +21,17 @@
   color: var(--color-brand);
 }
 
+.workerCardWrapper {
+  position: absolute;
+  right: 0px;
+  top: 80px;
+  width: 160px;
+  background: black;
+}
+
+.workerCardWrapper svg {
+  display: inline-block;
+}
 
 @media screen and (max-width: 1024px) {
   .header {

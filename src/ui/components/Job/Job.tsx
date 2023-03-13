@@ -89,11 +89,11 @@ const Layout: FC<JobProps> = ({
           </div>
         </div>
         {job.success && <div className={`${$.jobTaken} ${$.jobInfoActions}`}>
-          <Button className={$.actionBtn} onClick={handleMoreJobs}>More Jobs</Button>
+          <Button className={$.actionBtn} onClick={() => handleMoreJobs()}>More Jobs</Button>
         </div>}
         {!job.success && <div className={$.jobInfoActions}>
           <Button className={$.actionBtn} variant={ButtonVariant.SECONDARY} onClick={handleRejectAction}>No Thanks</Button>
-          <Button className={$.actionBtn} onClick={handleAcceptAction}>{`I'll Take it`}</Button>
+          <Button className={$.actionBtn} onClick={() => handleAcceptAction()}>{`I'll Take it`}</Button>
         </div>
         }
         {(job.errors || job.success) &&<div className={$.jobStatus}>

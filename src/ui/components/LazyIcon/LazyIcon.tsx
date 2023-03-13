@@ -6,7 +6,11 @@ export enum IconType {
     LOCATION = 'location',
     TOOLS = 'tools',
     PERSON = 'person',
-    ARROW_RIGHT = 'arrow_right'
+    ARROW_RIGHT = 'arrow_right',
+    EMAIL = 'email',
+    PHONE = 'phone',
+    DISTANCE = 'distance'
+
 }
 
 interface LazyIconProps {
@@ -41,6 +45,15 @@ const LazyIcon: FC<LazyIconProps> = ({
             case IconType.ARROW_RIGHT:
                 const { MdArrowForwardIos } = await import('react-icons/md');
                 return MdArrowForwardIos
+            case IconType.EMAIL:
+                const { MdEmail } = await import('react-icons/md');
+                return MdEmail
+            case IconType.PHONE:
+                const { BsPhoneFill } = await import('react-icons/bs');
+                return BsPhoneFill
+            case IconType.DISTANCE:
+                const { RiPinDistanceFill } = await import('react-icons/ri');
+                return RiPinDistanceFill
         
         }
     }
