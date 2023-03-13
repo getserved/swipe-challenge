@@ -18,11 +18,8 @@ function App() {
 
   useEffect(() => {
     fetchJobs()
-  }, [])
-
-  useEffect(() => {
     fetchWorker()
-  }, [currentWorkerId])
+  }, [])
 
   return (
     <main>
