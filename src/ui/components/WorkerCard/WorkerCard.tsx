@@ -6,14 +6,21 @@ import LazyIcon, { IconType } from "../LazyIcon/LazyIcon"
 import { transformPhone } from "../../../core/models/models"
 
 interface WorkerCardProps{
-    worker: Worker
+    worker: Worker,
+    showName?: boolean
 }
 
 const WorkerCard: FC<WorkerCardProps> = ({
-    worker
+    worker,
+    showName = false
 }) => {
     return (
     <div className={$.workerCard}>
+        {showName && <div className={$.item}>
+            <div className={$.icon}><LazyIcon icon={IconType.PERSON}/></div>
+            <div>{worker.firstName} {worker.lastName}</div>
+        </div>
+        }
         <div className={$.item}>
             <div className={$.icon}><LazyIcon icon={IconType.EMAIL}/></div>
             <div>{worker.email}</div>

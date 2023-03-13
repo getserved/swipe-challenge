@@ -3,7 +3,7 @@ import '@testing-library/jest-dom'
 import WorkerCard from './WorkerCard'
 import { act } from 'react-dom/test-utils'
 
-test('WorkerCard rendering with children', async () => {
+test('WorkerCard rendering with init states', async () => {
   const props = {
     worker: {
       address:{formattedAddress: '1 Downing St, Chicago, IL 60654, USA', zoneId: 'America/Chicago'},
@@ -23,4 +23,5 @@ test('WorkerCard rendering with children', async () => {
   expect(screen.getByText("(509)6290220")).toBeInTheDocument()
   expect(screen.getByText(/20 miles/i)).toBeInTheDocument()
   expect(screen.getByText(/1 Downing St, Chicago, IL 60654, USA/i)).toBeInTheDocument()
+  expect(screen.queryByText("Jim Rose")).not.toBe(undefined)
 })
